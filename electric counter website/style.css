@@ -1,0 +1,74 @@
+
+
+h1{
+    text-align: center;
+}
+
+#left-side{
+    border: 1px solid;
+    height: 90vh;
+    width: 30%;
+}
+
+#middle-side{
+    border: 1px solid;
+    height: 90vh;
+    width: 30%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+#right-side{
+    border: 1px solid;
+    height: 90vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    gap: 1%;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.electronics{
+    border: 1px solid;
+    height: 40%;
+}
+
+.fit{
+    max-width: 99%;
+    max-height: 99%;
+}
+
+.usage-box{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#electric-usage{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(255, 0, 0);
+}
+
+.add-box{
+    
+    background-color: rgb(221, 221, 221);
+}
+
+.btn{
+    margin-top: 5%;
+}
+
+.scrollable-list {
+    max-height: 200px; 
+    overflow-y: auto;  
+    border: 1px solid #ccc;
+    padding: 10px; 
+}
