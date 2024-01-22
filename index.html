@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Counter Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main heading -->
+    <h1>Electric Counter Simulator</h1>
+    <!-- Main container for the left-side, middle-side, and right-side sections -->
+
+    <!-- Left-side section for adding and listing electronics -->
+    <div class="container">
+        <div id="left-side">
+            <!-- Section for adding electronics with a form -->
+            <h3>Add Electronics</h3>
+            <div class="electronics add-box">
+                <div>
+                    <!-- Form to input electronics -->
+                    <form action="">
+                        <label for="fname">Electronic name:</label>
+                        <input type="text" id="fname" name="fname"><br><br>
+                        <label for="lname">Electric usage:</label>
+                        <input type="text" id="lname" name="lname"><br><br>
+                        <label for="measurements">Measurement:</label>
+                        <!-- Dropdown for selecting measurement units -->
+                        <select name="cars" id="measurements">
+                            <option value="watts">watts</option>
+                            <option value="kilowatts">kilowatts</option>
+                        </select>
+                        <!-- Button to add electronic items -->
+                        <div class="container btn">
+                            <button>Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Section for listing electronics -->
+            <h3>List of Electronics</h3>
+            <div class="electronics">
+                <div class="scrollable-list">
+                    <!-- example list for displaying electronic items -->
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                        <li>Item 4</li>
+                        <li>Item 5</li>
+                        <li>Item 6</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Middle-side section for the light switch that will activate everything -->
+        <div id="middle-side">
+            <img class="fit" src="./images/lightswitch.png" alt="light switch">
+        </div>
+
+        <!-- Right-side section for displaying current electricity usage -->
+        <div id="right-side">
+            <h3>Current Electricity Usage</h3>
+            <!-- Box for displaying current electricity usage -->
+            <div class="electronics usage-box">
+                <div id="electric-usage">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
