@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electric Counter Simulator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <!-- Main heading -->
-    <h1>Electric Counter Simulator</h1>
+    <h1 id="h1Title">Electric Counter Simulator</h1>
     <!-- Main container for the left-side, middle-side, and right-side sections -->
 
     <!-- Left-side section for adding and listing electronics -->
@@ -20,19 +21,19 @@
                 <div>
                     <!-- Form to input electronics -->
                     <form action="">
-                        <label for="fname">Electronic name:</label>
-                        <input type="text" id="fname" name="fname"><br><br>
-                        <label for="lname">Electric usage:</label>
-                        <input type="text" id="lname" name="lname"><br><br>
+                        <label for="ename">Electronic name:</label>
+                        <input type="text" id="elecName" name="ename"><br><br>
+                        <label for="usage">Electric usage:</label>
+                        <input type="text" id="elecUsage" name="usage"><br><br>
                         <label for="measurements">Measurement:</label>
                         <!-- Dropdown for selecting measurement units -->
-                        <select name="cars" id="measurements">
+                        <select name="measurement" id="measurements">
                             <option value="watts">watts</option>
                             <option value="kilowatts">kilowatts</option>
                         </select>
                         <!-- Button to add electronic items -->
                         <div class="container btn">
-                            <button>Add</button>
+                            <button id="addButton">Add</button>
                         </div>
                     </form>
                 </div>
@@ -43,13 +44,8 @@
             <div class="electronics">
                 <div class="scrollable-list">
                     <!-- example list for displaying electronic items -->
-                    <ul>
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                        <li>Item 4</li>
-                        <li>Item 5</li>
-                        <li>Item 6</li>
+                    <ul id="listOfItems">
+                        <li>Name-  -Usage-  -Measurement</li>
                     </ul>
                 </div>
             </div>
@@ -71,6 +67,7 @@
             </div>
         </div>
     </div>
-
+    <script src="./index.js"></script>
+    
 </body>
 </html>
