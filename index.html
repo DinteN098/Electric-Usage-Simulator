@@ -6,6 +6,9 @@
     <title>Electric Counter Simulator</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&family=Noto+Sans:wght@200&family=Nunito+Sans:opsz@6..12&family=Open+Sans&family=Playfair+Display&family=Quicksand&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Main heading -->
@@ -16,7 +19,7 @@
     <div class="container">
         <div id="left-side">
             <!-- Section for adding electronics with a form -->
-            <h3>Add Electronics</h3>
+            <h3 class = "left_title">Add Electronics</h3>
             <div class="electronics add-box">
                 <div>
                     <!-- Form to input electronics -->
@@ -40,7 +43,7 @@
             </div>
 
             <!-- Section for listing electronics -->
-            <h3>List of Electronics</h3>
+            <h3 class = "left_title">List of Electronics</h3>
             <div class="electronics">
                 <div class="scrollable-list">
                     <!-- example list for displaying electronic items -->
@@ -53,12 +56,16 @@
 
         <!-- Middle-side section for the light switch that will activate everything -->
         <div id="middle-side">
-            <img class="fit" src="./images/lightswitch.png" alt="light switch">
+            <label class = "toggle">
+                <span class = "switch">OFF</span>
+                <input type = "checkbox">
+                <span class = "slider"></span>
+            </label>
         </div>
 
         <!-- Right-side section for displaying current electricity usage -->
         <div id="right-side">
-            <h3>Current Electricity Usage</h3>
+            <h3 class = "right_title">Current Electricity Usage</h3>
             <!-- Box for displaying current electricity usage -->
             <div class="electronics usage-box">
                 <div id="electric-usage">
