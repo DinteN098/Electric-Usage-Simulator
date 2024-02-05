@@ -1,3 +1,7 @@
+
+var currentItems = [];
+
+
 //event listener when the add button is pressed
 $("#addButton").click(function(event){
     // Avoid refreshing page if the user presses the add button
@@ -7,6 +11,7 @@ $("#addButton").click(function(event){
     var itemName = $("#elecName").val();
     var itemUsage = $("#elecUsage").val();
     var electricMeasurement = $("#measurements").val();
+    currentItems.push(parseInt(itemUsage))
 
     // Validate if itemUsage is a valid integer
     if (!Number.isInteger(Number(itemUsage))) {
@@ -21,7 +26,7 @@ $("#addButton").click(function(event){
             
             // Add the string from above into the unordered list
             $("#listOfItems").append(addItem);
-
+            
             // Clearing the text boxes
             $("#elecName").val('');
             $("#elecUsage").val('');
@@ -37,9 +42,27 @@ toggle.addEventListener('click', () => {
     const switch_label = document.querySelector(".toggle .switch");
     switch_label.textContent = toggle.checked ? "ON" : "OFF";
 
-    if (toggle.checked){
-        document.body.classList.add("dark_mode")
-    } else{
-        document.body.classList.remove("dark_mode")
+    if (toggle.checked == true){
+        document.body.classList.add("dark_mode");
+
+        //only update current usage when the switch is on
+        var currentUsage = 0;
+        
+        //add up all current power on the currentItems list to the currentUsage list
+        for (var i = 0; i < currentItems.length; i++){
+                currentUsage = currentUsage + currentItems[i];
+            }
+        
+        //show the current usage
+        $("#current-electrity").text(currentUsage);
+        }
+    else if (toggle.checked == false){
+        document.body.classList.remove("dark_mode");
+        //when switch is off then reset the currentUsage
+        currentUsage = 0;
+        $("#current-electrity").text(currentUsage);
     }
+
 });
+
+
