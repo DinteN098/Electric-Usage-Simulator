@@ -136,12 +136,13 @@ input:checked + .slider:before{
     align-items: center;
 }
 
-#electric-usage{
-    height: 100px;
-    width: 100px;
-    background-color: rgb(255, 0, 0);
+#electric-usage {
+    display: inline-block; /* or use 'inline-flex' or 'inline-grid' */
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid red;
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+    box-sizing: border-box; /* Include padding and border in the box model */
 }
-
 
 .btn{
     margin-top: 5%;
@@ -149,6 +150,7 @@ input:checked + .slider:before{
 
 #right-side .right_title{
     text-align: center;
+
     font-family: 'Noto Sans', sans-serif;
 }
 /* RIGHT SECTION CODE*/
